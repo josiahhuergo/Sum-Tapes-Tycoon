@@ -6,7 +6,6 @@
 
 #include <ncurses.h>
 #include <unistd.h>
-#include <stdbool.h>
 #include <pthread.h>
 #include <stdlib.h>
 
@@ -33,7 +32,7 @@ void display()
 {
 	clear();
 	
-	printw("SPACE - HACK (+$1)\n\n");
+	printw("SPACE - HACK (+$0.01)\n\n");
 	printw("MONEY: %.2f\n\n", money);
 	printw("q - QUIT");
 	
@@ -63,11 +62,11 @@ void *read_input()
 {
 	char key;
 
-	while (true) {
+	while (1) {
 		key = getch();
 		switch (key) {
 			case ' ':
-				money += 1.00;
+				money += 0.01;
 				display();
 				break;
 			case 'q':
