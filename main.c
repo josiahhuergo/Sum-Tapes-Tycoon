@@ -33,7 +33,8 @@ void display()
 	clear();
 	
 	printw("SPACE - HACK (+$0.01)\n\n");
-	printw("MONEY: %.2f\n\n", money);
+	printw("MONEY: %.2f\n", money);
+	printw("\n\n\n\n\n\n\n\n");
 	printw("q - QUIT");
 	
 	refresh();
