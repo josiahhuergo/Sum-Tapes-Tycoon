@@ -1,5 +1,5 @@
 CC=gcc
-LIBS=-lncurses -ltinfo
+LIBS=-lncurses -ltinfo -lm
 
 
 sum-tycoon: main.c
